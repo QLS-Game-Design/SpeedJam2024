@@ -55,8 +55,7 @@ public class PlayerController : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "NormalDimension" 
-            || collision.gameObject.tag == "GlitchedDimension")
+        if (collision.gameObject.tag == ("Ground"))
         {
             onGround = true;
         }
@@ -64,8 +63,7 @@ public class PlayerController : MonoBehaviour
  
     void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "NormalDimension" 
-            || collision.gameObject.tag == "GlitchedDimension")
+        if (collision.gameObject.tag == ("NormalDimension")
         {
             onGround = false;
         }
