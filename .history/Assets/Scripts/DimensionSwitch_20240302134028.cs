@@ -7,7 +7,7 @@ using UnityEngine;
 public class DimensionSwitch : MonoBehaviour
 {
 
-    private bool isGlitched; 
+    public bool isGlitched; 
     // Start is called before the first frame update
     void Start()
     {
@@ -22,38 +22,30 @@ public class DimensionSwitch : MonoBehaviour
             //norm dimension
             if (isGlitched == false) {
                 isGlitched = true;
+            } else {
+                isGlitched = false;
+            }
+            if (isGlitched == false) {
                 GameObject[] norm = GameObject.FindGameObjectsWithTag("NormalDimension"); 
                 foreach (var item in norm)
                 {
                     if (item!=this.gameObject)
                     {
                         item.GetComponent<BoxCollider2D>().enabled = false;
-                    }
-                }
-                GameObject[] glitched = GameObject.FindGameObjectsWithTag("GlitchedDimension"); 
-                foreach (var item in glitched)
-                {
-                    if (item!=this.gameObject)
-                    {
+                    } else {
                         item.GetComponent<BoxCollider2D>().enabled = true;
                     }
                 }
+                isGlitched = true;
             //glitched dimension
             } else {
-                isGlitched = false;
                 GameObject[] glitched = GameObject.FindGameObjectsWithTag("GlitchedDimension"); 
                 foreach (var item in glitched)
                 {
                     if (item!=this.gameObject)
                     {
                         item.GetComponent<BoxCollider2D>().enabled = false;
-                    }
-                }
-                GameObject[] norm = GameObject.FindGameObjectsWithTag("NormalDimension"); 
-                foreach (var item in norm)
-                {
-                    if (item!=this.gameObject)
-                    {
+                    } else {
                         item.GetComponent<BoxCollider2D>().enabled = true;
                     }
                 }

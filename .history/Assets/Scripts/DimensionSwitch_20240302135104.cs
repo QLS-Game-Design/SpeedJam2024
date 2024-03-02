@@ -19,6 +19,7 @@ public class DimensionSwitch : MonoBehaviour
     {
         
         if (Input.GetKeyDown("c")) {
+            Debug.Log(isGlitched);
             //norm dimension
             if (isGlitched == false) {
                 isGlitched = true;
