@@ -4,7 +4,12 @@
 TagManager:
   serializedVersion: 2
   tags:
+<<<<<<< Updated upstream
   - Ground
+=======
+  - NormalDimension
+  - GlitchedDimension
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
