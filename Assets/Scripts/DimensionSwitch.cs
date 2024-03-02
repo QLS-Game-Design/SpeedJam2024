@@ -26,7 +26,7 @@ public class DimensionSwitch : MonoBehaviour
                 {
                     if (item!=this.gameObject)
                     {
-                        item.GetComponent<BoxCollider>().enabled = false;
+                        item.GetComponent<BoxCollider2D>().enabled = false;
                     } else {
                         item.GetComponent<BoxCollider2D>().enabled = true;
                     }
