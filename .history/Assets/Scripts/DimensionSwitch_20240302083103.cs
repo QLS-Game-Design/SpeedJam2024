@@ -21,11 +21,6 @@ public class DimensionSwitch : MonoBehaviour
         if (Input.GetKeyDown("c")) {
             //norm dimension
             if (isGlitched == false) {
-                isGlitched = true;
-            } else {
-                isGlitched = false;
-            }
-            if (isGlitched == false) {
                 GameObject[] norm = GameObject.FindGameObjectsWithTag("NormalDimension"); 
                 foreach (var item in norm)
                 {
@@ -49,6 +44,7 @@ public class DimensionSwitch : MonoBehaviour
                         item.GetComponent<BoxCollider2D>().enabled = true;
                     }
                 }
+                isGlitched = true
             }
         } 
     }

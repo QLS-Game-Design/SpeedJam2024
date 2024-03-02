@@ -22,8 +22,6 @@ public class DimensionSwitch : MonoBehaviour
             //norm dimension
             if (isGlitched == false) {
                 isGlitched = true;
-            } else {
-                isGlitched = false;
             }
             if (isGlitched == false) {
                 GameObject[] norm = GameObject.FindGameObjectsWithTag("NormalDimension"); 
