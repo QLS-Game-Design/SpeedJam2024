@@ -72,8 +72,8 @@ public class PlayerController : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "NormalDimension" 
-            || collision.gameObject.tag == "GlitchedDimension"
-            || collision.gameObject.tag == "Ground")
+            || collision.gameObject.tag == "GlitchedDimension")
+            
         {
             onGround = true;
         }

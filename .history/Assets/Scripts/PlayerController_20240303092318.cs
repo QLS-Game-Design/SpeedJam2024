@@ -73,7 +73,8 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.tag == "NormalDimension" 
             || collision.gameObject.tag == "GlitchedDimension"
-            || collision.gameObject.tag == "Ground")
+            ||
+            )
         {
             onGround = true;
         }
