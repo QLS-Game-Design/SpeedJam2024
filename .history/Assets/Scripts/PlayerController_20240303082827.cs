@@ -55,7 +55,7 @@ public class PlayerController : MonoBehaviour
     }
 
     public void die() {
-        //death
+
     }
 
     public void Hit(int damage) {
@@ -73,7 +73,7 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("Player hit the spike!");
             die();
-            //death
+
         }
     }
  

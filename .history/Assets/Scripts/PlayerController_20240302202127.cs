@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -14,8 +13,6 @@ public class PlayerController : MonoBehaviour
     public bool onGround = true;
     private float timeFromLastJump = 0f;
     private bool jumpQueued = false;
-
-
     // Start is called before the first frame update
     void Start()
     {
@@ -54,9 +51,7 @@ public class PlayerController : MonoBehaviour
         
     }
 
-    public void die() {
-        //death
-    }
+    
 
     public void Hit(int damage) {
         currHealth -= damage;
@@ -68,12 +63,6 @@ public class PlayerController : MonoBehaviour
             || collision.gameObject.tag == "GlitchedDimension")
         {
             onGround = true;
-        }
-        if (collision.gameObject.CompareTag("GlitchedDimensionTrap") || collision.gameObject.CompareTag("NormalDimensionTrap"))
-        {
-            Debug.Log("Player hit the spike!");
-            die();
-            //death
         }
     }
  

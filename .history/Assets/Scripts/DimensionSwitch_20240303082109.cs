@@ -47,7 +47,7 @@ public class DimensionSwitch : MonoBehaviour
                     }
                 }
                 GameObject[] glitchedTrap = GameObject.FindGameObjectsWithTag("GlitchedDimensionTrap"); 
-                foreach (var item in glitchedTrap)
+                foreach (var item in glitched)
                 {
                     if (item!=this.gameObject)
                     {

@@ -7,6 +7,8 @@ TagManager:
   - Ground
   - NormalDimension
   - GlitchedDimension
+  - NormalDimensionTrap
+  - GlitchedDimensionTrap
   layers:
   - Default
   - TransparentFX

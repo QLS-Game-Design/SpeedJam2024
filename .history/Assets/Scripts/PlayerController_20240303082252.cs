@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -54,12 +53,19 @@ public class PlayerController : MonoBehaviour
         
     }
 
-    public void die() {
-        //death
-    }
+    
 
     public void Hit(int damage) {
         currHealth -= damage;
+    }
+
+void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("GlitchedDimensionTrap") || collision.gameObject.CompareTag(""))
+        {
+
+            Debug.Log("Player hit the spike!");
+        }
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -68,12 +74,6 @@ public class PlayerController : MonoBehaviour
             || collision.gameObject.tag == "GlitchedDimension")
         {
             onGround = true;
-        }
-        if (collision.gameObject.CompareTag("GlitchedDimensionTrap") || collision.gameObject.CompareTag("NormalDimensionTrap"))
-        {
-            Debug.Log("Player hit the spike!");
-            die();
-            //death
         }
     }
  

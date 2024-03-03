@@ -54,9 +54,7 @@ public class PlayerController : MonoBehaviour
         
     }
 
-    public void die() {
-        //death
-    }
+    public void die
 
     public void Hit(int damage) {
         currHealth -= damage;
@@ -72,8 +70,7 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("GlitchedDimensionTrap") || collision.gameObject.CompareTag("NormalDimensionTrap"))
         {
             Debug.Log("Player hit the spike!");
-            die();
-            //death
+
         }
     }
  
