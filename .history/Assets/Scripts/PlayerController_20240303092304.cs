@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Security.Cryptography;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -72,8 +71,8 @@ public class PlayerController : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "NormalDimension" 
-            || collision.gameObject.tag == "GlitchedDimension"
-            || collision.gameObject.tag == "Ground")
+            || collision.gameObject.tag == "GlitchedDimension")
+            
         {
             onGround = true;
         }
