@@ -9,6 +9,8 @@ TagManager:
   - GlitchedDimension
   - NormalDimensionTrap
   - GlitchedDimensionTrap
+  - JumpBoost
+  - Trap
   layers:
   - Default
   - TransparentFX
