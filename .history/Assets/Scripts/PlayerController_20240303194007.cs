@@ -51,10 +51,9 @@ public class PlayerController : MonoBehaviour
         {
            rb.velocity = Vector2.up * jumpForce;
            jumpQueued = false;
-           onGround = false;
         }
 
-        
+        onGround 
     }
 
     public void die() {

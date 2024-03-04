@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
         if (maxHealth <= 0) {
             Destroy(gameObject);
         }
-
+        
         horizontalMove = Input.GetAxisRaw("Horizontal") * speed;
 
         rb.velocity = new Vector2(horizontalMove, rb.velocity.y);
@@ -51,7 +51,6 @@ public class PlayerController : MonoBehaviour
         {
            rb.velocity = Vector2.up * jumpForce;
            jumpQueued = false;
-           onGround = false;
         }
 
         

@@ -51,7 +51,6 @@ public class PlayerController : MonoBehaviour
         {
            rb.velocity = Vector2.up * jumpForce;
            jumpQueued = false;
-           onGround = false;
         }
 
         
@@ -77,6 +76,8 @@ public class PlayerController : MonoBehaviour
             || collision.gameObject.tag == "Ground")
         {
             onGround = true;
+        } else {
+            
         }
         if (collision.gameObject.CompareTag("GlitchedDimensionTrap") || collision.gameObject.CompareTag("NormalDimensionTrap"))
         {
@@ -84,7 +85,7 @@ public class PlayerController : MonoBehaviour
             die();
             //death
         }
-    } 
+    }
  
     void OnCollisionExit2D(Collision2D collision)
     {
